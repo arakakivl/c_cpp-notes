@@ -1,42 +1,23 @@
 #include <stdio.h>
 
-#define NASCII 128
+float convert_to_celsius(float f);
+float convert_to_fahrenheint(float c);
 
-void print_bar(int n);
+#define START 0.0
+#define STEP 20.0
+#define FINAL 300.0
 
 int main()
 {
-	int characters[NASCII];
-	for(int i = 0; i < NASCII; ++i) {
-		characters[i] = 0;
-	}
-
-	for(int c = getchar(); c != EOF; c = getchar()) {
-		++characters[c];
-	}
-
-	for(int i = 0; i < NASCII; ++i) {
-		if (characters[i] > 0) {
-			if (i == '\n')
-				printf("\'\\n\': ");
-			else if (i == '\t')
-				printf("\'\\t\': ");
-			else
-				printf("\'%c\': ", i);
-
-			print_bar(characters[i]);
-			printf("\n");
-		}
-	}
-
+	printf("Fahr\tCelsius\n");
+	for(float i = START; i <= FINAL; i += STEP)
+		printf("%3.1f\t%6.2f\n", i, convert_to_celsius(i));
 }
 
-void print_bar(int n) {
-	for(int i = 0; i < n; ++i)
-		printf("=");
+float convert_to_celsius(float f) {
+	return (5.0 / 9.0) * (f - 32);
 }
-// A position in the characters array represents an ASCII item.
-// Then, position 65 represents 'A'.
 
-// For each inputed character, we increase by one in the respective
-// ASCII position in the array.
+float convert_to_fahrenheint(float c) {
+	return ((9.0 / 5.0) * c) + 32;
+}
