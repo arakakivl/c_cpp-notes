@@ -1,9 +1,7 @@
 #include <stdio.h>
+#include "utilities.h"
 
 #define MAX 1000
-
-int get_line(char arr[], int max);
-void out_line(char arr[]);
 
 void rm_tabs(char arr[], int length);
 void rm_trailing(char arr[], int length);
@@ -24,33 +22,6 @@ int main() {
 			out_line(line);
 		}
 	}
-}
-
-int get_line(char arr[], int max) {
-	int l = 0;
-	for(int c = getchar(); c != EOF && l < max; c = getchar()) {
-		if (c == '\n') {
-			arr[l] = c;
-			break;
-		} else if (l == max - 1) {
-			arr[l] = '\n';
-			break;
-		} else if (c == EOF) {
-			return EOF;
-		}
-
-		arr[l] = c;
-		++l;
-	}
-
-	return l;
-}
-
-void out_line(char arr[]) {
-	for(int i = 0; arr[i] != '\n'; ++i)
-		putchar(arr[i]);
-
-	printf("\n");
 }
 
 void rm_tabs(char arr[], int length) {

@@ -1,9 +1,7 @@
 #include <stdio.h>
+#include "utilities.h>
 
 #define MAX 1000
-
-int get_line(char line[], int max);
-void out_line(char line[]);
 
 void reverse_line(char line[]);
 
@@ -19,33 +17,6 @@ int main() {
 
 		printf("\n");
 	}
-}
-
-int get_line(char line[], int max) {
-	int l = 0;
-	for(int c = getchar(); c != EOF && l < max; c = getchar()) {
-		if(c == '\n') {
-			line[l] = c;
-			break;
-		} else if (c == EOF) {
-			return EOF;
-		} else if (l == max - 1) {
-			line[l] = '\n';
-			break;
-		}
-
-		line[l] = c;
-		++l;
-	}
-
-	return l;
-}
-
-void out_line(char line[]) {
-	for(int i = 0; line[i] != '\n'; ++i)
-		putchar(line[i]);
-
-	printf("\n");
 }
 
 void reverse_line(char line[]) {
