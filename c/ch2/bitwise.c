@@ -25,18 +25,21 @@ int main() {
 
 	// << left shift
 	a = 500; // or 111110100;
-	b = 66; // or 1000010;
 
 	// same as: append two zero into 111110100, or multiply 500 by ({2} * 2).
 	int aa = a << 2; // or 11111010000
 	printf("Value of aa: %d\n", aa);
 
+	// right shift
+	b = 66; // or 1000010;
+
 	// same as: remove one bit from 1000010, or divide 66 by (1 * 2).
 	int bb = b >> 1; // or 100001;
-
-	// >> right shift
+	printf("Value of bb: %d\n", bb);
 
 	// ~ one's complement (unary)
+	a = 48; // or 0x110000;
+	c = ~a; // or 0x001111;
 
 	return 0;
 }
