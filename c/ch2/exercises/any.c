@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int anyin(char in[], char what[]);
-int main() {
+int main(void) {
 	printf("If tr is in str, the pos of tr is %d\n", anyin("abrcdaaabrdcabra", "brd"));
 }
 
@@ -13,7 +13,6 @@ int anyin(char in[], char what[]) {
 			if (what[j] == '\0')
 				return 1;
 
-			printf("k is %d\n", k);	
 			++k;
 			++j;
 		}
