@@ -26,6 +26,7 @@ int main()
 		}
 	}
 
+	// Assigning same addr for ptr1 and ptr2.
 	ptr1 = numbers.data();
 	ptr2 = &(numbers[0]);
 
@@ -53,6 +54,7 @@ int main()
 	std::cout << "The addr of ptr1 is now " << ptr1 << " and deferencing it: " << *ptr1 << std::endl;
 
 	std::cout << std::endl;
+
 	// Subtracting ints to pointers
 	ptr1--;
 	std::cout << "The addr of ptr1 is now " << ptr1 << " and deferencing it: " << *ptr1 << std::endl;
