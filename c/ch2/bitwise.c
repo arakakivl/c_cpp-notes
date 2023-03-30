@@ -9,19 +9,19 @@ int main() {
 	a = b = c = 0;
 
 	// & AND
-	a = 0155;  // or 0x1101101
-	b = 0143;  // or 0x1100011
-	c = a & b; // or 0x1100001
+	a = 0155;  // or 0b1101101
+	b = 0143;  // or 0b1100011
+	c = a & b; // or 0b1100001
 
 	// | inclusive OR
-	a = 0x32A; // or 0x1100101010
-	b = 0xF2;  // or 0x0011110010
-	c = a | b; // or 0x1111111010
+	a = 0x32A; // or 0b1100101010
+	b = 0xF2;  // or 0b0011110010
+	c = a | b; // or 0b1111111010
 
 	// ^ exclusive OR
-	a = 0233;   // or 0x0000010011011
-	b = 0x192A; // or 0x1100100101010
-	c = a ^ b; // or  0x0011001001110
+	a = 0233;   // or 0b0000010011011
+	b = 0x192A; // or 0b1100100101010
+	c = a ^ b;  // or 0b1100110110001
 
 	// << left shift
 	a = 500; // or 111110100;
@@ -38,8 +38,8 @@ int main() {
 	printf("Value of bb: %d\n", bb);
 
 	// ~ one's complement (unary)
-	a = 48; // or 0x110000;
-	c = ~a; // or 0x001111;
+	a = 48; // or 0b110000;
+	c = ~a; // or 0b001111;
 
 	return 0;
 }
