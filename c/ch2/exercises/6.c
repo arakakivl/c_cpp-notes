@@ -17,6 +17,6 @@ int main(void) {
 unsigned int setbits(unsigned int x, int p, int n, unsigned int y) {
     unsigned int k = p - n + 1;
     unsigned int j = ~(~0 << n);
-    
+
     return (~(j << k) & x) | ((y & j) << k);
 }
